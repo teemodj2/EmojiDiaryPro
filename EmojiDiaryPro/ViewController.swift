@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
     
-    
+    var moodPerson: [Smile] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-          return 1
+          return moodPerson.isEmpty ? 0 : moodPerson.count
           
       }
     
@@ -28,7 +30,27 @@ class TableViewController: UITableViewController {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EmojiTableViewCell
 
+        let mood = moodPerson[indexPath.row]
+        
+        
+        cell.dateLabel.text = mood.date
+//        cell.imageOfEmoji.image = UIImage(data: mood.smileType)
+        cell.occupationLabel.text = mood.occupation
+        
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            if  segue.identifier == "showDetail" {
+                 
+                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+                let mood = moodPerson[indexPath.row]
+                let newMoodVC = segue.destination as! NewEmojiViewController
+               
+                
+                
+         }
     }
 
 }

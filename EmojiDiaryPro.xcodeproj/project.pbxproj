@@ -64,8 +64,8 @@
 			children = (
 				D761DF872476B9E200888320 /* AppDelegate.swift */,
 				D761DF892476B9E200888320 /* SceneDelegate.swift */,
-				D761DF8B2476B9E200888320 /* ViewController.swift */,
 				D7E7E97224794ECE00CF0D6A /* EmojiTableViewCell.swift */,
+				D761DF8B2476B9E200888320 /* ViewController.swift */,
 				D7E7E96E247948C400CF0D6A /* NewEmojiViewController.swift */,
 				D761DF8D2476B9E200888320 /* Main.storyboard */,
 				D761DF932476B9E400888320 /* Assets.xcassets */,

@@ -81,33 +81,248 @@
         <scene sceneID="fcR-8t-cjE">
             <objects>
                 <tableViewController id="cVd-X5-MEZ" customClass="NewEmojiViewController" customModule="EmojiDiaryPro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffQ-W2-99D">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffQ-W2-99D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qSh-aC-ZGw">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qSh-aC-ZGw" id="Y35-RX-GXd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="dyf-aq-D6c">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UwG-cY-Sac">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UwG-cY-Sac" id="Eev-uL-sua">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сегодня 05/05/2020 10:55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHj-GK-BbV">
+                                                    <rect key="frame" x="118.5" y="14" width="177.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cHj-GK-BbV" firstAttribute="centerX" secondItem="Eev-uL-sua" secondAttribute="centerX" id="jku-nK-H0C"/>
+                                                <constraint firstItem="cHj-GK-BbV" firstAttribute="top" secondItem="Eev-uL-sua" secondAttribute="top" constant="14" id="obD-j9-BLz"/>
+                                                <constraint firstAttribute="bottom" secondItem="cHj-GK-BbV" secondAttribute="bottom" constant="13" id="t3h-sy-8pb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="209" id="qSh-aC-ZGw">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="209"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qSh-aC-ZGw" id="Y35-RX-GXd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как вы себя чувствуете?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLM-hD-Hfy">
+                                                    <rect key="frame" x="93" y="18" width="228.5" height="35.5"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4rp-LD-qnB">
+                                                    <rect key="frame" x="33" y="100" width="348" height="60"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPI-Tl-Sn4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                            <state key="normal" backgroundImage="iphone_app60x60-1"/>
+                                                            <connections>
+                                                                <action selector="smileButtonPressed:" destination="cVd-X5-MEZ" eventType="touchUpInside" id="jZt-Vk-qhO"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnE-Tt-2uf">
+                                                            <rect key="frame" x="72" y="0.0" width="60" height="60"/>
+                                                            <state key="normal" backgroundImage="iphone_app60x60-2"/>
+                                                            <connections>
+                                                                <action selector="smileButtonPressed:" destination="cVd-X5-MEZ" eventType="touchUpInside" id="w9R-61-iVG"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w9-fO-88E">
+                                                            <rect key="frame" x="144" y="0.0" width="60" height="60"/>
+                                                            <state key="normal" backgroundImage="iphone_app60x60-3"/>
+                                                            <connections>
+                                                                <action selector="smileButtonPressed:" destination="cVd-X5-MEZ" eventType="touchUpInside" id="mz2-rl-TvK"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-cO-47h">
+                                                            <rect key="frame" x="216" y="0.0" width="60" height="60"/>
+                                                            <state key="normal" backgroundImage="iphone_app60x60"/>
+                                                            <connections>
+                                                                <action selector="smileButtonPressed:" destination="cVd-X5-MEZ" eventType="touchUpInside" id="NpX-UI-cnX"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B4-zi-kRh">
+                                                            <rect key="frame" x="288" y="0.0" width="60" height="60"/>
+                                                            <state key="normal" backgroundImage="iphone_app60x60-4"/>
+                                                            <connections>
+                                                                <action selector="smileButtonPressed:" destination="cVd-X5-MEZ" eventType="touchUpInside" id="bl4-v4-qqr"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xJO-7D-clB">
+                                                    <rect key="frame" x="36" y="173" width="342.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Супер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5J-ol-Ygs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хорошо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGI-HH-JXd">
+                                                            <rect key="frame" x="62.5" y="0.0" width="64" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Так себе" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-vp-xTq">
+                                                            <rect key="frame" x="138.5" y="0.0" width="70" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Плохо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PD-mR-k29">
+                                                            <rect key="frame" x="220.5" y="0.0" width="49.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ужасно" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS9-if-KpL">
+                                                            <rect key="frame" x="282" y="0.0" width="60.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xJO-7D-clB" secondAttribute="trailing" constant="15.5" id="0Fq-A7-3Il"/>
+                                                <constraint firstItem="4rp-LD-qnB" firstAttribute="top" secondItem="ZLM-hD-Hfy" secondAttribute="bottom" constant="46.5" id="9o5-jb-3l5"/>
+                                                <constraint firstItem="ZLM-hD-Hfy" firstAttribute="top" secondItem="Y35-RX-GXd" secondAttribute="top" constant="18" id="HGZ-gi-CaL"/>
+                                                <constraint firstItem="ZLM-hD-Hfy" firstAttribute="centerX" secondItem="Y35-RX-GXd" secondAttribute="centerX" id="VKg-Xv-hLo"/>
+                                                <constraint firstItem="xJO-7D-clB" firstAttribute="leading" secondItem="Y35-RX-GXd" secondAttribute="leadingMargin" constant="16" id="WxG-dP-nvQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xJO-7D-clB" secondAttribute="bottom" constant="4.5" id="g2F-2Y-oxZ"/>
+                                                <constraint firstItem="xJO-7D-clB" firstAttribute="top" secondItem="4rp-LD-qnB" secondAttribute="bottom" constant="13" id="ohb-7P-I62"/>
+                                                <constraint firstItem="4rp-LD-qnB" firstAttribute="centerX" secondItem="ZLM-hD-Hfy" secondAttribute="centerX" id="wls-U4-mcf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="KYj-1H-24J">
+                                        <rect key="frame" x="0.0" y="281" width="414" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KYj-1H-24J" id="O0c-1F-Hga">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="W7k-sW-EIR">
+                                                    <rect key="frame" x="38.5" y="27" width="337" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egc-XO-QbX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                                            <state key="normal" title="Работа"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfS-zC-rWb">
+                                                            <rect key="frame" x="69" y="0.0" width="46" height="30"/>
+                                                            <state key="normal" title="Отдых"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qr-qd-o7G">
+                                                            <rect key="frame" x="133" y="0.0" width="46" height="30"/>
+                                                            <state key="normal" title="Семья"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VO-zL-Zaw">
+                                                            <rect key="frame" x="197" y="0.0" width="51" height="30"/>
+                                                            <state key="normal" title="Друзья"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-3s-BaN">
+                                                            <rect key="frame" x="266" y="0.0" width="71" height="30"/>
+                                                            <state key="normal" title="Свидание"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIP-uF-VIF">
+                                                    <rect key="frame" x="59.5" y="65" width="316" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YId-yO-e8g">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
+                                                            <state key="normal" title="Спорт"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ax-5N-Pef">
+                                                            <rect key="frame" x="61" y="0.0" width="78" height="30"/>
+                                                            <state key="normal" title="Вечеринка"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD3-GT-Kd3">
+                                                            <rect key="frame" x="156" y="0.0" width="36" height="30"/>
+                                                            <state key="normal" title="Кино"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-fR-CjP">
+                                                            <rect key="frame" x="209" y="0.0" width="52" height="30"/>
+                                                            <state key="normal" title="Чтение"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgX-0B-guo">
+                                                            <rect key="frame" x="278" y="0.0" width="38" height="30"/>
+                                                            <state key="normal" title="Игры"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="KK7-PM-Q1h">
+                                                    <rect key="frame" x="85.5" y="103" width="264" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTL-y8-kDV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
+                                                            <state key="normal" title="Покупки"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-bG-pgn">
+                                                            <rect key="frame" x="84" y="0.0" width="30" height="30"/>
+                                                            <state key="normal" title="Еда"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRt-xZ-PNc">
+                                                            <rect key="frame" x="137" y="0.0" width="52" height="30"/>
+                                                            <state key="normal" title="Уборка"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEM-46-onm">
+                                                            <rect key="frame" x="212" y="0.0" width="52" height="30"/>
+                                                            <state key="normal" title="Уборка"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KK7-PM-Q1h" firstAttribute="top" secondItem="zIP-uF-VIF" secondAttribute="bottom" constant="8" id="CN6-ez-EFx"/>
+                                                <constraint firstItem="W7k-sW-EIR" firstAttribute="top" secondItem="O0c-1F-Hga" secondAttribute="top" constant="27" id="DPU-PW-qnY"/>
+                                                <constraint firstItem="KK7-PM-Q1h" firstAttribute="centerX" secondItem="zIP-uF-VIF" secondAttribute="centerX" id="TdL-bw-btS"/>
+                                                <constraint firstItem="W7k-sW-EIR" firstAttribute="centerX" secondItem="O0c-1F-Hga" secondAttribute="centerX" id="a70-wF-Hir"/>
+                                                <constraint firstItem="zIP-uF-VIF" firstAttribute="trailing" secondItem="W7k-sW-EIR" secondAttribute="trailing" id="mT2-VC-aJc"/>
+                                                <constraint firstItem="zIP-uF-VIF" firstAttribute="top" secondItem="W7k-sW-EIR" secondAttribute="bottom" constant="8" id="pJD-O4-kQH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="cVd-X5-MEZ" id="3Ov-tL-5Nf"/>
                             <outlet property="delegate" destination="cVd-X5-MEZ" id="FWw-BC-DdH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Emoji" id="PTl-hs-Dbd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="maX-jb-ddL"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="p4E-yC-39U"/>
+                    <navigationItem key="navigationItem" title="New Emoji" largeTitleDisplayMode="always" id="PTl-hs-Dbd">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="maX-jb-ddL">
+                            <connections>
+                                <action selector="cancelAction:" destination="cVd-X5-MEZ" id="Akg-Fj-aIm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="p4E-yC-39U"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="cHj-GK-BbV" id="aek-Vt-tU4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQx-Y4-y5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="163"/>
+            <point key="canvasLocation" x="1753.6231884057972" y="162.72321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aKE-PV-geL">
@@ -146,4 +361,11 @@
             <point key="canvasLocation" x="1754" y="-613"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iphone_app60x60" width="60" height="60"/>
+        <image name="iphone_app60x60-1" width="60" height="60"/>
+        <image name="iphone_app60x60-2" width="60" height="60"/>
+        <image name="iphone_app60x60-3" width="60" height="60"/>
+        <image name="iphone_app60x60-4" width="60" height="60"/>
+    </resources>
 </document>

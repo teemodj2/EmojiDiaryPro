@@ -14,4 +14,6 @@ class EmojiTableViewCell: UITableViewCell {
     @IBOutlet weak var occupationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    
+    
 }

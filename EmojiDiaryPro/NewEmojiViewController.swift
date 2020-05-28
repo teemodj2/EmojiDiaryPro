@@ -12,12 +12,44 @@ import CoreData
 
 class NewEmojiViewController: UITableViewController {
     
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    
     var moodPerson: [Smile] = []
+    
+    
+    @IBAction func smileButtonPressed(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            print("Happy button tapped")
+            self.saveSmileType(smileType: "Happy")
+            break
+        case 1:
+            print("Smiling button tapped")
+            self.saveSmileType(smileType: "Smiling")
+            break
+        case 2:
+            print("Confused button tapped")
+            self.saveSmileType(smileType: "Confused")
+            break
+        case 3:
+            print("Unhappy button tapped")
+            self.saveSmileType(smileType: "Unhappy")
+            break
+        case 4:
+            print("Sad button tapped")
+            self.saveSmileType(smileType: "Sad")
+            break
+        default:
+            break
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       currentDate()
     }
     
     //Save current date
@@ -33,6 +65,10 @@ class NewEmojiViewController: UITableViewController {
         return dateString
         
     }
+    
+//    func prepareToSaveSmile() -> String {
+//        
+//    }
     
     func saveSmileType(smileType: String) {
            let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -52,31 +88,46 @@ class NewEmojiViewController: UITableViewController {
        }
        
        // Current Date
-//       func currentDate() {
-//           let date = Date()
-//           let dateFormatter = DateFormatter()
-//
-//           dateFormatter.dateFormat = "dd/M/yyyy, H:mm"
-//           dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-//
-//           let dateString = dateFormatter.string(from: date)
-//           dateLabel.text = "Сегодня \(dateString)"
-//
-//
-//       }
+       func currentDate() {
+           let date = Date()
+           let dateFormatter = DateFormatter()
+
+           dateFormatter.dateFormat = "dd/M/yyyy, H:mm"
+           dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+
+           let dateString = dateFormatter.string(from: date)
+           dateLabel.text = "Сегодня \(dateString)"
+
+
+       }
+    
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func setupNavigationBar() {
+        
+        if let topItem = navigationController?.navigationBar.topItem {
+            topItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                        style: .plain,
+                                                        target: nil,
+                                                        action: nil)
+        }
+        navigationItem.leftBarButtonItem = nil
+
+    
+        
+    }
     
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
